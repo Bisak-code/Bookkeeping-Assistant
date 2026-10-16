@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --brand: #1e8f6d;
+  --brand-strong: #125f49;
+  --success: #0f9f6e;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --ink: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900;
+}
+
+.sidebar-link.active {
+  @apply bg-brand-50 text-brand-700;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-soft;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold;
+}
+
+.metric-value {
+  font-variant-numeric: tabular-nums;
+}
